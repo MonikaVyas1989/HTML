@@ -6,9 +6,17 @@ body{
     width: 1024px;
     margin: 0 auto;
     background-color:linen;
+    
+    
+   display: grid;
+   grid-template-rows: 1fr,1fr,1fr,1fr /1fr,1fr;
+    padding: 0;
+    
 }
 
 header{
+    grid-column-start: 1;
+    grid-column-end: 3;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,12 +43,6 @@ ul{
  justify-content: space-evenly;
 }
 
-
-ul li {
-    display: inline-block;
-}
-
-
 .login {
     flex: 1;
     text-align: end;
@@ -52,15 +54,17 @@ ul li {
 
 .mainclass{
 
+    grid-column-start: 1;
+    grid-column-end: 2;
     display: grid;
-    grid-template-columns: repeat(3,1fr);      
-    grid-template-rows: 100px; 
+    grid-template-columns: 1fr,1fr;       
     border-radius:2px solid;
     border: lightgreen;
+
     
 }
 .heading{
-    margin-right: 200px;
+    margin-right: 200px; 
     background-color:lightcoral;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -74,12 +78,11 @@ ul li {
     grid-column-end: 3;
 }
 .aside{
-    margin: 20px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: 10px;
     background-color:peru;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start:1;
-    grid-row-end: 4;
+   
 }
 .article1{
     margin-right: 2px;
@@ -106,6 +109,8 @@ ul li {
 
 
 footer{
+    grid-column-start: 1;
+    grid-column-end: 3;
     text-align: center;
     background-color: magenta;
 }
